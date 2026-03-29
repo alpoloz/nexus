@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nexus Career Portal - Startups</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface": "#f7f9fb",
+                        "on-secondary": "#f8f8ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#324054",
+                        "inverse-on-surface": "#9a9d9f",
+                        "primary-fixed-dim": "#ccd4ee",
+                        "primary-dim": "#4a5268",
+                        "on-tertiary-container": "#455367",
+                        "primary": "#565e74",
+                        "tertiary-fixed": "#d5e3fd",
+                        "inverse-primary": "#dae2fd",
+                        "error": "#9f403d",
+                        "on-surface-variant": "#566166",
+                        "surface-container-high": "#e1e9ee",
+                        "on-secondary-container": "#455367",
+                        "secondary-dim": "#465468",
+                        "surface-dim": "#cfdce3",
+                        "tertiary": "#526075",
+                        "outline-variant": "#a9b4b9",
+                        "primary-container": "#dae2fd",
+                        "on-primary-fixed": "#373f54",
+                        "secondary-fixed-dim": "#c7d5ed",
+                        "surface-bright": "#f7f9fb",
+                        "surface-container-low": "#f0f4f7",
+                        "on-tertiary-fixed-variant": "#4e5c71",
+                        "secondary-container": "#d5e3fc",
+                        "on-surface": "#2a3439",
+                        "background": "#f7f9fb",
+                        "tertiary-dim": "#465469",
+                        "on-background": "#2a3439",
+                        "on-tertiary": "#f8f8ff",
+                        "on-error-container": "#752121",
+                        "inverse-surface": "#0b0f10",
+                        "secondary": "#526074",
+                        "on-primary-container": "#4a5167",
+                        "error-container": "#fe8983",
+                        "tertiary-container": "#d5e3fd",
+                        "surface-variant": "#d9e4ea",
+                        "on-secondary-fixed-variant": "#4e5c71",
+                        "tertiary-fixed-dim": "#c7d5ee",
+                        "on-primary-fixed-variant": "#535b71",
+                        "error-dim": "#4e0309",
+                        "surface-container-highest": "#d9e4ea",
+                        "on-primary": "#f7f7ff",
+                        "primary-fixed": "#dae2fd",
+                        "surface-tint": "#565e74",
+                        "surface-container": "#e8eff3",
+                        "on-secondary-fixed": "#324053",
+                        "secondary-fixed": "#d5e3fc",
+                        "on-error": "#fff7f6",
+                        "outline": "#717c82"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- SideNavBar Component -->
+<aside class="fixed left-0 top-0 h-screen w-[280px] bg-slate-100 dark:bg-slate-900 flex flex-col h-full py-8 px-4 z-50">
+<div class="mb-10 px-4">
+<h1 class="text-2xl font-black text-slate-800 dark:text-slate-100">Nexus Portal</h1>
+<p class="text-xs font-medium font-inter text-slate-500 uppercase tracking-widest mt-1">The Digital Curator</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors duration-200 rounded-full font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors duration-200 rounded-full font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="rss_feed">rss_feed</span>
+<span>Engineering Blogs</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-900 dark:text-indigo-100 rounded-full font-bold text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="rocket_launch" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+<span>Startups</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors duration-200 rounded-full font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span>Applications</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-slate-200/50 pt-6 px-2 space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-sm font-medium rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-sm font-medium rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="logout">logout</span>
+<span>Logout</span>
+</a>
+<div class="flex items-center gap-3 px-4 py-4 mt-4">
+<img alt="User Profile Picture" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_S8SAH7IdBddgAiOvZxAa-AQE8rxxhv7Q-cYzgnlHLqmv4I6NqkktPrAN5mfyPWvJxTQ6U908-TViUGiKfGQu-zJgb6jnXkFLfOyfvQP09maWsW56Gsi_13RTt4ptK-3opt2DSyrROPBF7JYfPY6h1LVIS5acayWJVJsf17eMUFe-LkK72Gwme4SDlP13EHW-0w8dKvsObr9rI9QBTuEl5_TR8QDTSBLIc00dXT7UVFaQtxysHPYme5MRAqgxOtfPFGOqUANFdjLA"/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate">Alex Chen</p>
+<p class="text-xs text-slate-500 truncate">Senior Developer</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopNavBar Component -->
+<header class="flex justify-between items-center w-full h-16 px-8 ml-[280px] max-w-[calc(100%-280px)] bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl sticky top-0 z-40">
+<div class="flex items-center gap-8">
+<nav class="flex items-center gap-6">
+<a class="text-slate-500 dark:text-slate-400 text-xs font-semibold font-inter hover:text-slate-900 transition-colors" href="#">Network</a>
+<a class="text-slate-900 dark:text-slate-100 border-b-2 border-slate-900 dark:border-slate-100 pb-1 text-xs font-semibold font-inter" href="#">Resources</a>
+<a class="text-slate-500 dark:text-slate-400 text-xs font-semibold font-inter hover:text-slate-900 transition-colors" href="#">Help</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg" data-icon="search">search</span>
+<input class="bg-surface-container-low border-none rounded-full pl-10 pr-4 py-1.5 text-sm w-64 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search startups..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[280px] p-12 max-w-[1200px] mx-auto">
+<!-- Hero Welcome Section -->
+<section class="mb-12">
+<h2 class="text-[3.5rem] font-extrabold font-headline leading-tight tracking-tight text-on-surface mb-2">Discover Startups.</h2>
+<p class="text-on-surface-variant font-body text-lg max-w-2xl">Curated high-growth ventures looking for exceptional engineering talent. Your next architectural challenge starts here.</p>
+</section>
+<!-- Filters & Stats Header -->
+<div class="flex flex-wrap items-center justify-between gap-6 mb-8">
+<div class="flex gap-3">
+<button class="px-6 py-2.5 bg-primary text-on-primary rounded-full text-sm font-semibold shadow-sm hover:opacity-95 transition-all">All Sectors</button>
+<button class="px-6 py-2.5 bg-surface-container-low text-on-surface-variant border border-outline-variant/15 rounded-full text-sm font-semibold hover:bg-surface-container-high transition-colors">Fintech</button>
+<button class="px-6 py-2.5 bg-surface-container-low text-on-surface-variant border border-outline-variant/15 rounded-full text-sm font-semibold hover:bg-surface-container-high transition-colors">AI &amp; ML</button>
+<button class="px-6 py-2.5 bg-surface-container-low text-on-surface-variant border border-outline-variant/15 rounded-full text-sm font-semibold hover:bg-surface-container-high transition-colors">HealthTech</button>
+</div>
+<div class="text-sm font-medium text-on-surface-variant">
+                Showing <span class="text-on-surface font-bold">128</span> verified startups
+            </div>
+</div>
+<!-- Startups Grid/List -->
+<div class="grid grid-cols-1 gap-6">
+<!-- Startup Card 1 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl flex items-start gap-8 hover:bg-surface-container-high transition-all duration-300 relative overflow-hidden">
+<div class="w-20 h-20 rounded-xl bg-slate-100 flex items-center justify-center shrink-0 border border-outline-variant/10 overflow-hidden">
+<img alt="Luminary AI Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzBR5zCj5O2NBlRg3Ng11Uldb0dFF5U9vi37lYdsE2NGM99FqSHakb66Sv72v9GJm-UdHocB6SVQmtUpBaKfIiitcQ8IHZ8v9fnq3hpGavBC0Q4rx-PSy9rINyTp529CbTZNcrKDEX4-hDb_4ajH69unIpZfkz9nfJQ9PajO5WHQz4kY53IPx_H--NakMP9cZkJWBdIOR6KWhNe3WhpJzmtrJhrQTRdOnJcwcEGQLJcE5Pt7x_r70gZ4Jk5HiC5GZBwY71xlkXIMpP"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-3">
+<h3 class="text-xl font-bold font-headline">Luminary AI</h3>
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star_half" style="font-variation-settings: 'FILL' 1;">star_half</span>
+<span class="ml-1 text-xs font-bold text-on-surface-variant">4.8</span>
+</div>
+</div>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant bg-surface-container p-2 px-3 rounded-lg">AI &amp; Data</span>
+</div>
+<p class="text-on-surface-variant text-sm font-medium mb-6 leading-relaxed max-w-3xl">
+                        Building the next generation of autonomous infrastructure monitoring using distributed neural networks. We focus on low-latency decision making at the edge.
+                    </p>
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400" data-icon="payments">payments</span>
+<div>
+<p class="text-[0.6875rem] text-on-surface-variant uppercase font-bold tracking-tighter">Funding</p>
+<p class="text-sm font-bold">$24M Series B</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400" data-icon="groups">groups</span>
+<div>
+<p class="text-[0.6875rem] text-on-surface-variant uppercase font-bold tracking-tighter">Team Size</p>
+<p class="text-sm font-bold">42 People</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400" data-icon="location_on">location_on</span>
+<div>
+<p class="text-[0.6875rem] text-on-surface-variant uppercase font-bold tracking-tighter">Location</p>
+<p class="text-sm font-bold">San Francisco, CA</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 self-center">
+<button class="px-6 py-2 bg-primary text-on-primary rounded-lg text-sm font-bold hover:shadow-lg transition-all">View Jobs</button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="bookmark_border">bookmark_border</span>
+</button>
+</div>
+</div>
+<!-- Startup Card 2 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl flex items-start gap-8 hover:bg-surface-container-high transition-all duration-300 relative overflow-hidden">
+<div class="w-20 h-20 rounded-xl bg-slate-100 flex items-center justify-center shrink-0 border border-outline-variant/10 overflow-hidden">
+<img alt="Velox Health Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnRMJH5SJ-dbMoxAU_yz-huwKEpEFhPnxGbBKhhFvfuYcyqITBzbtZZGsWAf0xcKYjVA-bDgB79SsMTG03wv3MNwGSLFRHtIgXa_1HMPfIpSUBErZLiUHV0l47xFABOMnddasVWO81Li7monMFMYPhdoKvlF260TjQAmkm2yg2EAKjMQ_lHqDhbjsHHKjtgWYDXMtT5SOjyJPCN5Lq3mR4SDOPFS711I8JD9sUHy5LNv4z6np45nRhYsudlAtDQTL_18tjb_1PPSCS"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-3">
+<h3 class="text-xl font-bold font-headline">Velox Health</h3>
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 0;">star</span>
+<span class="ml-1 text-xs font-bold text-on-surface-variant">4.1</span>
+</div>
+</div>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant bg-surface-container p-2 px-3 rounded-lg">HealthTech</span>
+</div>
+<p class="text-on-surface-variant text-sm font-medium mb-6 leading-relaxed max-w-3xl">
+                        Revolutionizing patient telemetry with wearable sensors and real-time cloud analytics. Our mission is to reduce hospital readmission rates by 40%.
+                    </p>
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400" data-icon="payments">payments</span>
+<div>
+<p class="text-[0.6875rem] text-on-surface-variant uppercase font-bold tracking-tighter">Funding</p>
+<p class="text-sm font-bold">$12.5M Seed</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400" data-icon="groups">groups</span>
+<div>
+<p class="text-[0.6875rem] text-on-surface-variant uppercase font-bold tracking-tighter">Team Size</p>
+<p class="text-sm font-bold">18 People</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400" data-icon="location_on">location_on</span>
+<div>
+<p class="text-[0.6875rem] text-on-surface-variant uppercase font-bold tracking-tighter">Location</p>
+<p class="text-sm font-bold">New York, NY</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 self-center">
+<button class="px-6 py-2 bg-primary text-on-primary rounded-lg text-sm font-bold hover:shadow-lg transition-all">View Jobs</button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="bookmark_border">bookmark_border</span>
+</button>
+</div>
+</div>
+<!-- Startup Card 3 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl flex items-start gap-8 hover:bg-surface-container-high transition-all duration-300 relative overflow-hidden">
+<div class="w-20 h-20 rounded-xl bg-slate-100 flex items-center justify-center shrink-0 border border-outline-variant/10 overflow-hidden">
+<img alt="Quant Ledger Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe21vpiYe5HXcrXVl0Y2oRBV8cSjY9JKQKQvp4bjnP1u8WL3xBvuXfzzfFM7XYej34Mafxm2BUNbU4kSNuZowDG8yLMf_7_qQga5fGPRSKx3m1eIoF2DsFHQWS91wXk6g6f-ftjNv9d3x92TyTQ7AGhdIXWu4BO_QA8hYurMcAv6oWLVLRznL6agyZo4DAE-99v-6uYBMhY5Q32mONpOEIUGAZ2NhJSakuKtOWjvZ9aqamff2HXml4YF7AHTYO_Bv0ZHbozCie84aj"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-3">
+<h3 class="text-xl font-bold font-headline">Quant Ledger</h3>
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="ml-1 text-xs font-bold text-on-surface-variant">5.0</span>
+</div>
+</div>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant bg-surface-container p-2 px-3 rounded-lg">Fintech</span>
+</div>
+<p class="text-on-surface-variant text-sm font-medium mb-6 leading-relaxed max-w-3xl">
+                        Developing ultra-high-frequency trading systems for institutional-grade digital assets. Our tech stack is built on Rust and custom FPGA hardware.
+                    </p>
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400" data-icon="payments">payments</span>
+<div>
+<p class="text-[0.6875rem] text-on-surface-variant uppercase font-bold tracking-tighter">Funding</p>
+<p class="text-sm font-bold">$105M Series C</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400" data-icon="groups">groups</span>
+<div>
+<p class="text-[0.6875rem] text-on-surface-variant uppercase font-bold tracking-tighter">Team Size</p>
+<p class="text-sm font-bold">115 People</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400" data-icon="location_on">location_on</span>
+<div>
+<p class="text-[0.6875rem] text-on-surface-variant uppercase font-bold tracking-tighter">Location</p>
+<p class="text-sm font-bold">Remote / London</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 self-center">
+<button class="px-6 py-2 bg-primary text-on-primary rounded-lg text-sm font-bold hover:shadow-lg transition-all">View Jobs</button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="bookmark_border">bookmark_border</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

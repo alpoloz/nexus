@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nexus Engineering Blogs Aggregator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f7f9fb",
+              "on-secondary": "#f8f8ff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed": "#324054",
+              "inverse-on-surface": "#9a9d9f",
+              "primary-fixed-dim": "#ccd4ee",
+              "primary-dim": "#4a5268",
+              "on-tertiary-container": "#455367",
+              "primary": "#565e74",
+              "tertiary-fixed": "#d5e3fd",
+              "inverse-primary": "#dae2fd",
+              "error": "#9f403d",
+              "on-surface-variant": "#566166",
+              "surface-container-high": "#e1e9ee",
+              "on-secondary-container": "#455367",
+              "secondary-dim": "#465468",
+              "surface-dim": "#cfdce3",
+              "tertiary": "#526075",
+              "outline-variant": "#a9b4b9",
+              "primary-container": "#dae2fd",
+              "on-primary-fixed": "#373f54",
+              "secondary-fixed-dim": "#c7d5ed",
+              "surface-bright": "#f7f9fb",
+              "surface-container-low": "#f0f4f7",
+              "on-tertiary-fixed-variant": "#4e5c71",
+              "secondary-container": "#d5e3fc",
+              "on-surface": "#2a3439",
+              "background": "#f7f9fb",
+              "tertiary-dim": "#465469",
+              "on-background": "#2a3439",
+              "on-tertiary": "#f8f8ff",
+              "on-error-container": "#752121",
+              "inverse-surface": "#0b0f10",
+              "secondary": "#526074",
+              "on-primary-container": "#4a5167",
+              "error-container": "#fe8983",
+              "tertiary-container": "#d5e3fd",
+              "surface-variant": "#d9e4ea",
+              "on-secondary-fixed-variant": "#4e5c71",
+              "tertiary-fixed-dim": "#c7d5ee",
+              "on-primary-fixed-variant": "#535b71",
+              "error-dim": "#4e0309",
+              "surface-container-highest": "#d9e4ea",
+              "on-primary": "#f7f7ff",
+              "primary-fixed": "#dae2fd",
+              "surface-tint": "#565e74",
+              "surface-container": "#e8eff3",
+              "on-secondary-fixed": "#324053",
+              "secondary-fixed": "#d5e3fc",
+              "on-error": "#fff7f6",
+              "outline": "#717c82"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+            color: #2a3439;
+        }
+        h1, h2, h3 {
+            font-family: 'Manrope', sans-serif;
+        }
+        .editorial-shadow {
+            box-shadow: 0 24px 48px -12px rgba(42, 52, 57, 0.04);
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-custom {
+            animation: spin 1s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- SideNavBar (The Anchor) -->
+<aside class="fixed left-0 top-0 h-screen w-[280px] bg-slate-100 dark:bg-slate-900 flex flex-col py-8 px-4 z-50">
+<div class="mb-10 px-4">
+<h1 class="text-2xl font-black text-slate-800 dark:text-slate-100 tracking-tight">Nexus Portal</h1>
+<p class="text-xs font-semibold font-inter text-slate-500 mt-1">The Digital Curator</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors rounded-full font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-inter text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-900 dark:text-indigo-100 rounded-full font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="rss_feed">rss_feed</span>
+<span class="font-inter text-sm">Engineering Blogs</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors rounded-full font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+<span class="font-inter text-sm">Startups</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors rounded-full font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-inter text-sm">Applications</span>
+</a>
+</nav>
+<div class="mt-auto space-y-2 pt-6 px-4">
+<a class="flex items-center gap-3 py-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-inter text-sm font-medium">Settings</span>
+</a>
+<a class="flex items-center gap-3 py-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-inter text-sm font-medium">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="ml-[280px] min-h-screen">
+<!-- TopNavBar (The Shell) -->
+<header class="sticky top-0 z-40 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-between items-center w-full h-16 px-12">
+<div class="flex items-center gap-8">
+<nav class="flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors text-xs font-semibold font-inter" href="#">Network</a>
+<a class="text-slate-900 dark:text-slate-100 border-b-2 border-slate-900 dark:border-slate-100 pb-1 text-xs font-semibold font-inter" href="#">Resources</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors text-xs font-semibold font-inter" href="#">Help</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant text-lg" data-icon="search">search</span>
+<input class="bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 text-sm w-64 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" placeholder="Search insights..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<img alt="Alex's Profile" class="w-8 h-8 rounded-full bg-surface-container-high object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe4THKJtAzc8cjFwuIeTozn2GZoOjQhWM6glRItOSdK4MQnEFRVAZqv_PR-B6onZvDGv7H3FbWdekrvCOAAkL90uC9ohSL-36Rf_Obpd5rl_8Q08JQkGk1fRbPQJw73M8KMpID8B1Z5NNKaXmWc8fmtiHTLJJQgZe95NPM6eKMvMdzUQ3aBwbbV0-eCp7TLDRXpX6kLARtMWPrGuvgMhSIgfBaci4M8J3_QmC_ml6q4h9sWoLLNEzSUp9b-_ZVUUBxpzI32rioUq8K"/>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="px-12 py-10 max-w-4xl mx-auto">
+<header class="mb-12">
+<h2 class="text-5xl font-extrabold font-headline tracking-tight text-on-surface mb-4">Engineering Insights</h2>
+<p class="text-on-surface-variant text-lg font-medium max-w-2xl leading-relaxed">Curated architectural deep-dives and technical excellence from the world's leading engineering organizations.</p>
+</header>
+<!-- Scrollable Vertical Feed of Blogs -->
+<div class="flex flex-col gap-8">
+<article class="group cursor-pointer">
+<div class="bg-surface-container-lowest rounded-xl p-6 editorial-shadow transition-transform duration-300 hover:-translate-y-1 overflow-hidden border border-outline-variant/5">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="md:w-1/3 h-48 rounded-xl overflow-hidden shrink-0">
+<img alt="Cybersecurity visualization" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzQfNYS289k-JPhI7G72ehQ1uSeORBe86TYfPiVBoQLGRQtzJbdHJq3F2-OX7H6RaaHWJnY4DjKkAof9TZiwJs1PD4DyP9nRwhVk0cXyaXOIJaWli2uO64KKHbaCynZR9ayJNAikoondZySMmoxk84HhdjcLhF52zaueDBmnTJ1tRUjw7Ag6RutDpTGQwJ-TemgSB14Xg3NNp9P7MHggDd6NjLFIdFhJwqQzR1FRXHwvhzxQb0Nenyz4FSpwytie6trgp9098tnD-f"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<div class="w-6 h-6 rounded bg-indigo-50 flex items-center justify-center font-bold text-[10px] text-indigo-600">A</div>
+<span class="text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Airbnb Engineering • Oct 24, 2023</span>
+</div>
+<h3 class="text-2xl font-bold font-headline leading-tight text-on-surface group-hover:text-primary transition-colors">Architecting for Hyper-Scale: How we handled 100M concurrent connections</h3>
+<p class="mt-2 text-sm text-on-surface-variant line-clamp-2">Exploration of our load balancing and connection pooling strategy during peak traffic events.</p>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<span class="text-xs font-semibold text-primary">12 min read</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="group cursor-pointer">
+<div class="bg-surface-container-lowest rounded-xl p-6 editorial-shadow transition-transform duration-300 hover:-translate-y-1 overflow-hidden border border-outline-variant/5">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="md:w-1/3 h-48 rounded-xl overflow-hidden shrink-0">
+<img alt="Server room infrastructure" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-kVzW61vPdkr3fK3ZDmlzL-vPbUd0YGVZiJRoALb0ZBV6mMSiyVX-y2vlwt9nJz9dpjHTx1nLyX7cT1iagtBnGoettdl2ynY8ock0nq4dYRCu-w4yxYFVx__6Q_MIK36TOUb4fh_GCmQHpjLCMKoj0UAp2EkdyjVqgqcn--QXOdeDfbBZqEGouwU1rhpOjojadDPCYAe5Kgk91rbJC7pKba9dd-tnlmHwvw_amENdRjpNlYJF-YiSP7kawHLv0Y1p6_W_HQLn6r73"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<div class="w-6 h-6 rounded bg-slate-100 flex items-center justify-center font-bold text-[10px]">U</div>
+<span class="text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Uber Eng • Oct 22, 2023</span>
+</div>
+<h3 class="text-2xl font-bold font-headline leading-tight text-on-surface group-hover:text-primary transition-colors">Improving Mobile App Performance with Bazel</h3>
+<p class="mt-2 text-sm text-on-surface-variant line-clamp-2">How we reduced build times by 40% using a hermetic build system for our monolithic mobile repository.</p>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<span class="text-xs font-semibold text-primary">8 min read</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="group cursor-pointer">
+<div class="bg-surface-container-lowest rounded-xl p-6 editorial-shadow transition-transform duration-300 hover:-translate-y-1 overflow-hidden border border-outline-variant/5">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="md:w-1/3 h-48 rounded-xl overflow-hidden shrink-0">
+<img alt="Circuit board microchip" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjUpVBaHaHUFiYOIfE_I5vo1P3NeDeL-XDLTntkI0E8JPzL9zW9vkU7UjmDEpQnzQuBl0h4-oQJzchGMbKVXgPJAI1kB643eqqq-GjMV493kfulpihpyHiF61oD44jFjFZyXeYgHPWvi2U7E_T_hq1GOYV5ev4sn1LW2AlbJpJY27Wc80fbXA__P1Li1mqVE5XFo099VBZeMWaTGdgvbKiyG9j0NYPmWha12VTOobDMae24LmXt_hjlfobnKRX6lbwilrFquJ-u4z7"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<div class="w-6 h-6 rounded bg-slate-100 flex items-center justify-center font-bold text-[10px]">S</div>
+<span class="text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Stripe Dev • Oct 21, 2023</span>
+</div>
+<h3 class="text-2xl font-bold font-headline leading-tight text-on-surface group-hover:text-primary transition-colors">How we handle 99.999% availability for API calls</h3>
+<p class="mt-2 text-sm text-on-surface-variant line-clamp-2">A deep dive into our multi-region replication and fallback mechanisms that power the global economy.</p>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<span class="text-xs font-semibold text-primary">15 min read</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="group cursor-pointer">
+<div class="bg-surface-container-lowest rounded-xl p-6 editorial-shadow transition-transform duration-300 hover:-translate-y-1 overflow-hidden border border-outline-variant/5">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="md:w-1/3 h-48 rounded-xl overflow-hidden shrink-0">
+<img alt="Software development monitor" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASmPto8FVxWlURUbcsE-Ov19bCMAfIcNGIfWFJnyK912bYjmj_mUJMilA-nK-Ov7eF-fuhmEaOsk9CnD7LOM21IwjfmJJSjeH8njxdGjeoZkOx236jLl4XXrSETxKzkkGFapXn8YI9zC4UWy38Z-Pko6hrxGZbyHh8nAFHM9QkUUmzcNqXY9iOelsx6yELUbeJSMqL3aZkp8wc4CzT0EZgGCG135DxsA1bnWmQF_m7-RZKl-Vyp_m2GSXCzSMAly6iPMXTWnHZ_D9-"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<div class="w-6 h-6 rounded bg-slate-100 flex items-center justify-center font-bold text-[10px]">M</div>
+<span class="text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Meta Eng • Oct 20, 2023</span>
+</div>
+<h3 class="text-2xl font-bold font-headline leading-tight text-on-surface group-hover:text-primary transition-colors">Next-Gen JavaScript Infrastructure at Scale</h3>
+<p class="mt-2 text-sm text-on-surface-variant line-clamp-2">Optimizing JavaScript execution and delivery for billions of users across diverse network conditions.</p>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<span class="text-xs font-semibold text-primary">10 min read</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Infinite Scroll Loading Indicator -->
+<div class="py-12 flex flex-col items-center justify-center gap-4">
+<div class="w-8 h-8 border-4 border-indigo-100 border-t-indigo-600 rounded-full animate-spin-custom"></div>
+<span class="text-sm font-semibold text-on-surface-variant animate-pulse">Loading more insights...</span>
+</div>
+</div>
+</div>
+<!-- Footer Visual Hint -->
+<footer class="mt-20 px-12 pb-12">
+<div class="border-t border-outline-variant/10 pt-8 flex justify-between items-center">
+<p class="text-xs text-on-surface-variant font-medium">© 2024 Nexus Career Portal • Engineering Feed</p>
+<div class="flex gap-6">
+<a class="text-xs text-on-surface-variant hover:text-primary font-bold" href="#">Privacy</a>
+<a class="text-xs text-on-surface-variant hover:text-primary font-bold" href="#">Terms</a>
+<a class="text-xs text-on-surface-variant hover:text-primary font-bold" href="#">API Access</a>
+</div>
+</div>
+</footer>
+</main>
+</body></html>
